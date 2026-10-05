@@ -92,15 +92,17 @@ table.gantt td.g b{position:absolute;inset:0;display:flex;align-items:center;jus
 .bi .arw{text-align:center;font-family:var(--gothic);font-size:12pt}
 .bi .h{font-family:var(--gothic);font-size:10pt;text-align:center;border:.6pt solid #000;border-bottom:0;background:#f2f2f2;padding:.5mm 0}
 .bi .b{border:.6pt solid #000;height:22mm;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;line-height:1.15}
-.bi .old{background:#f6d64a}
-.bi .old .nm{font-family:var(--myeong);font-size:22pt;color:#b3121b;letter-spacing:.12em}
-.bi .old .mk{position:absolute;left:3mm;top:2.5mm;background:#1e5aa8;color:#fff;font-family:var(--gyeon);font-size:9pt;padding:.4mm 1.4mm;border-radius:50%}
-.bi .old .tg{font-family:var(--gothic);font-size:9pt;color:#1e5aa8;margin-top:.8mm}
-.bi .new{background:#f3e3c3}
-.bi .new .nm{font-family:var(--head);font-size:21pt;color:#2b2622;letter-spacing:.06em}
+.bi .old{background:#8d8983}
+.bi .old .nm{font-family:var(--gyeon);font-size:24pt;color:#111;letter-spacing:.14em;text-shadow:.35mm .35mm 0 #4a4744}
+.bi .old .tg{font-family:var(--gothic);font-size:9pt;color:#fff;margin-top:.8mm}
+.bi .lg{position:absolute;left:2.5mm;top:2.5mm;width:8.5mm;height:8.5mm;background:#1f2a44;display:flex;align-items:center;justify-content:center}
+.bi .lg .hs{width:6.5mm;height:6.5mm}
+.bi .new{background:#1f2a44}
+.bi .new .lg{background:#8d8983}
+.bi .new .nm{font-family:var(--head);font-size:21pt;color:#fff;letter-spacing:.06em}
 .bi .new .sq{position:absolute;left:4mm;top:50%;margin-top:-5mm;width:10mm;height:10mm;background:#b8452a;color:#f3e3c3;
   font-family:var(--head);font-size:15pt;display:flex;align-items:center;justify-content:center}
-.bi .new .tg{font-family:var(--gothic);font-size:8.5pt;color:#b8452a;letter-spacing:.3em;margin-top:.8mm}
+.bi .new .tg{font-family:var(--gothic);font-size:8.5pt;color:#c9cfdb;letter-spacing:.3em;margin-top:.8mm}
 .org.tight{margin-top:1mm}.org.tight .box{min-height:15mm}.org.tight .box .b{padding:1mm 2mm}
 
 /* 사진 칸: 이미지(AI 생성 예시 사진)를 70mm 칸에 꽉 채움 */
