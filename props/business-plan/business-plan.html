@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<title>사업안 · 4편 소품</title>
+<!--
+  4편 '식품 전문가를 구했더니' 소품용 사업안 (A4 세로, 2장)
+  1장: 본문. 팀 구성 2×2 중 오른쪽 아래 칸은 비워 둔다.
+       → E4-12 최대표가 손끝으로 톡톡 두드리는 '빈 곳', '상품'이라고 적는 칸
+  2장: 백지. → E4-37/38 최대표가 넘겼을 때 보이는 텅 빈 다음 장
+  판매 상품은 일부러 어디에도 적지 않는다.
+-->
+<style>
+@page{size:A4;margin:0}
+:root{--ink:#16171a;--sub:#5d6066;--faint:#9a9da3;--line:#dcdde0;--soft:#f4f4f5;--answer:#ff6a13}
+*{box-sizing:border-box}
+html,body{margin:0;background:#e9e9eb}
+body{font-family:"Pretendard","Pretendard Variable","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);
+  word-break:keep-all;letter-spacing:-.015em;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;margin:10mm auto;background:#fff;position:relative;overflow:hidden;
+  padding:20mm 18mm 16mm;display:flex;flex-direction:column}
+@media print{html,body{background:#fff}.page{margin:0;box-shadow:none;break-after:page}}
+
+/* 머리 */
+.meta{display:flex;justify-content:space-between;font-size:9pt;font-weight:600;color:var(--faint);letter-spacing:.06em}
+.meta .conf{color:var(--answer)}
+h1{font-size:46pt;font-weight:800;letter-spacing:-.05em;margin:9mm 0 0;line-height:1}
+.title-rule{height:2.2mm;width:24mm;background:var(--answer);margin:6mm 0 5mm}
+.lede{font-size:15pt;font-weight:700;line-height:1.45;margin:0}
+.lede-sub{font-size:10.5pt;color:var(--sub);margin:2mm 0 0;line-height:1.6}
+
+/* 섹션 */
+section{margin-top:9mm}
+h2{display:flex;align-items:baseline;gap:3mm;font-size:12.5pt;font-weight:800;margin:0 0 4mm;
+  padding-bottom:2mm;border-bottom:1.2pt solid var(--ink)}
+h2 .no{color:var(--answer);font-size:11pt}
+
+/* 1. 사업 구조 */
+.flow{display:flex;align-items:center;gap:2.5mm}
+.flow .step{flex:1;border:1pt solid var(--line);border-radius:2mm;padding:3mm 2mm;text-align:center;font-size:10pt;font-weight:700}
+.flow .step small{display:block;font-size:8pt;font-weight:500;color:var(--sub);margin-top:.8mm}
+.flow .arr{color:var(--faint);font-weight:700}
+.flow .step.goal{background:var(--ink);color:#fff;border-color:var(--ink)}
+.flow .step.goal small{color:#c9cace}
+.strategy{margin:3.5mm 0 0;font-size:10pt;color:var(--sub)}
+.strategy b{color:var(--ink)}
+
+/* 2. 목표 333 */
+.goals{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+.goal-card{background:var(--soft);border-radius:2mm;padding:4mm 4mm 3.5mm}
+.goal-card .k{font-size:9pt;font-weight:600;color:var(--sub)}
+.goal-card .v{font-size:23pt;font-weight:800;letter-spacing:-.04em;line-height:1.15;margin-top:1mm}
+.goal-card .v span{font-size:12pt;font-weight:700;margin-left:.6mm}
+.goal-note{font-size:8.5pt;color:var(--faint);margin:2.5mm 0 0}
+
+/* 3. 팀 구성 2×2 — 오른쪽 아래는 빈 칸 */
+.team{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:38mm 38mm;gap:3.5mm}
+.slot{border:1.2pt solid var(--ink);border-radius:2.5mm;padding:4mm 4.5mm;display:flex;gap:4mm;align-items:flex-start}
+.slot svg{flex:none;width:12mm;height:12mm}
+.slot .role{font-size:17pt;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.slot .who{font-size:10.5pt;font-weight:700;margin-top:2mm}
+.slot .who em{font-style:normal;color:var(--answer)}
+.slot .cv{font-size:8.5pt;color:var(--sub);line-height:1.5;margin-top:1mm}
+.slot.empty{border-color:var(--ink)}
+
+/* 하단 */
+.next{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;
+  border-top:1pt solid var(--line);padding-top:3mm;font-size:8.5pt;color:var(--faint)}
+.next b{color:var(--ink);font-size:9.5pt}
+</style></head><body>
+
+<!-- ───────── 1장 · 본문 ───────── -->
+<div class="page">
+  <div class="meta"><span>ANSWER × 배우 김승수 · 식품 사업 프로젝트</span><span class="conf">대외비 · 2026. 10.</span></div>
+
+  <h1>사업안</h1>
+  <div class="title-rule"></div>
+  <p class="lede">배우가 직접 만들고, 콘텐츠로 파는 식품 브랜드</p>
+  <p class="lede-sub">28년차 배우와 함께 콘텐츠를 만들고, 그 콘텐츠로 식품을 판다. 광고비 0원.</p>
+
+  <section>
+    <h2><span class="no">01</span>사업 구조</h2>
+    <div class="flow">
+      <div class="step">배우 출연<small>신뢰·인지도</small></div><span class="arr">→</span>
+      <div class="step">콘텐츠 제작<small>재미·화제성</small></div><span class="arr">→</span>
+      <div class="step">팬 유입<small>구독·조회</small></div><span class="arr">→</span>
+      <div class="step">자체 유통 판매<small>광고비 0원</small></div><span class="arr">→</span>
+      <div class="step goal">매출<small>연 300억</small></div>
+    </div>
+    <p class="strategy">핵심 전략 · <b>콘텐츠가 재미있으면 가능하다.</b></p>
+  </section>
+
+  <section>
+    <h2><span class="no">02</span>목표 333</h2>
+    <div class="goals">
+      <div class="goal-card"><div class="k">구독자</div><div class="v">30<span>만 명</span></div></div>
+      <div class="goal-card"><div class="k">연 매출</div><div class="v">300<span>억 원</span></div></div>
+      <div class="goal-card"><div class="k">누적 조회 수</div><div class="v">3<span>억 회</span></div></div>
+    </div>
+    <p class="goal-note">※ 3개 목표 달성 시 배우 김승수 주연 영화 투자</p>
+  </section>
+
+  <section>
+    <h2><span class="no">03</span>팀 구성</h2>
+    <div class="team">
+      <div class="slot">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#16171a" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="15" r="6"/><path d="M13 40c0-7 5-12 11-12s11 5 11 12"/><circle cx="10" cy="19" r="4.5"/><path d="M2 40c0-6 3.5-10 8-10"/><circle cx="38" cy="19" r="4.5"/><path d="M46 40c0-6-3.5-10-8-10"/></svg>
+        <div><div class="role">출연</div><div class="who">배우 <em>김승수</em></div>
+          <div class="cv">28년차 배우 · 연예인 요리대회 우승<br>주몽 · 허준 · 미우새</div></div>
+      </div>
+      <div class="slot">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#16171a" stroke-width="3" stroke-linejoin="round"><rect x="4" y="9" width="40" height="30" rx="3"/><path d="M20 17v14l11-7z" fill="#16171a"/></svg>
+        <div><div class="role">콘텐츠</div><div class="who"><em>이정환</em> (라이언)</div>
+          <div class="cv">팔로워 20만 콘텐츠 전문가<br>“가능하죠.”</div></div>
+      </div>
+      <div class="slot">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#16171a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6l5 23h25l5-16H12"/><circle cx="17" cy="39" r="3"/><circle cx="35" cy="39" r="3"/></svg>
+        <div><div class="role">유통</div><div class="who"><em>앤써</em></div>
+          <div class="cv">브랜딩 · 유통 · 마케팅<br>광고비 0원 판매</div></div>
+      </div>
+      <div class="slot empty" aria-label="빈 칸"></div>
+    </div>
+  </section>
+
+  <div class="next"><span>ANSWER · 1 / 2</span><span>다음 장 &nbsp;<b>04 판매 상품 →</b></span></div>
+</div>
+
+<!-- ───────── 2장 · 백지 (넘기면 텅 빈 다음 장) ───────── -->
+<div class="page"></div>
+
+</body></html>
