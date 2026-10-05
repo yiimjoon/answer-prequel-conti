@@ -1,0 +1,70 @@
+/* 한글(한컴오피스)로 만든 보고서처럼 보이게 하는 양식
+ * 글꼴은 한컴오피스가 깔린 PC 의 실제 글꼴 이름을 쓴다.
+ * 휴먼명조가 있으면 본문에 먼저 쓰고, 없으면 HY신명조.
+ */
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;background:#d9d9d9}
+body{color:#000;-webkit-print-color-adjust:exact;print-color-adjust:exact;word-break:keep-all}
+:root{
+  --head:"HY헤드라인M","HYHeadLine-Medium","HYHeadLine";
+  --myeong:"휴먼명조","HumanMyeongjo","HY신명조","HYSinMyeongJo-Medium","HYSinMyeongJo","Batang",serif;
+  --gothic:"HY중고딕","HYGothic-Medium","HYGothic","Dotum",sans-serif;
+  --gyeon:"HY견고딕","HYGothic-Extra","Dotum",sans-serif;
+}
+/* 한글 기본 쪽 여백: 위 20 · 아래 15 · 왼쪽 오른쪽 30 (mm) */
+.page{width:210mm;height:297mm;margin:8mm auto;background:#fff;position:relative;overflow:hidden;
+  padding:20mm 25mm 15mm;display:flex;flex-direction:column;font-family:var(--myeong);font-size:12pt;
+  line-height:1.5;letter-spacing:-.05em}
+@media print{html,body{background:#fff}.page{margin:0;break-after:page}}
+
+/* 제목 상자: 위아래 굵은 선 + 연한 음영 */
+.title-box{border-top:2.4pt solid #000;border-bottom:2.4pt solid #000;background:#eef0f4;
+  padding:3.5mm 0 3mm;text-align:center}
+.title-box h1{font-family:var(--head);font-weight:normal;font-size:20pt;letter-spacing:-.04em;margin:0;line-height:1.3}
+.title-box .sub{font-family:var(--myeong);font-size:11.5pt;margin-top:.6mm}
+.dateline{text-align:right;font-family:var(--gothic);font-size:10.5pt;margin:2mm 0 0;letter-spacing:-.03em}
+
+/* 보고 요지 */
+.gist{border:1pt solid #000;padding:2mm 3.5mm;margin:3.5mm 0 0;font-size:12pt;line-height:1.5}
+.gist b{font-family:var(--gyeon);font-weight:normal}
+
+/* 대제목: 로마숫자 + 음영 띠 */
+h2{font-family:var(--head);font-weight:normal;font-size:14pt;letter-spacing:-.04em;margin:3.5mm 0 1.2mm;
+  display:flex;align-items:center;gap:2.5mm;line-height:1.3}
+h2 .no{display:inline-block;background:#1f3864;color:#fff;font-size:12pt;padding:.6mm 2.4mm .4mm;min-width:9mm;text-align:center}
+h2::after{content:"";flex:1;border-bottom:.8pt solid #1f3864;margin-left:1mm;transform:translateY(1.5mm)}
+
+/* 개조식 항목: □ → ○ → - (아래로 2타씩 들여쓰기) */
+.l1,.l2,.l3{margin:0;padding-left:1.2em;text-indent:-1.2em}
+.l1{margin-top:.8mm;font-size:12.5pt}
+.l1::before{content:"□ "}
+.l2{margin-left:1.4em;font-size:12pt}
+.l2::before{content:"○ "}
+.l3{margin-left:2.8em;font-size:11.5pt;padding-left:.9em;text-indent:-.9em}
+.l3::before{content:"- "}
+.note{font-family:var(--gothic);font-size:10pt;margin:1mm 0 0 1.4em;letter-spacing:-.03em}
+.note::before{content:"※ "}
+
+/* 표: 머리행 회색 음영, 가는 실선 */
+table{border-collapse:collapse;width:100%;margin-top:1.5mm;font-size:11.5pt}
+th,td{border:.6pt solid #000;padding:1mm 2mm;text-align:center;line-height:1.35}
+th{background:#d9d9d9;font-family:var(--gothic);font-weight:normal}
+table{border-top:1.6pt solid #000;border-bottom:1.6pt solid #000}
+td.num{font-family:var(--gyeon);font-size:12pt}
+
+/* 추진 체계도: 총괄 상자 → 담당 상자 4개 (네 번째는 빈 칸) */
+.org{margin-top:2mm;display:flex;flex-direction:column;align-items:center}
+.org .top{border:1.2pt solid #000;background:#eef0f4;font-family:var(--gyeon);font-size:12pt;padding:1.2mm 8mm;letter-spacing:-.03em}
+.org .stem{width:0;height:3mm;border-left:.9pt solid #000}
+.org .rail{width:75%;height:3mm;border:.9pt solid #000;border-bottom:0}
+.org .row{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;width:100%}
+.org .box{border:1pt solid #000;min-height:21mm;display:flex;flex-direction:column}
+.org .box .h{font-family:var(--gothic);font-size:12pt;text-align:center;border-bottom:.6pt solid #000;background:#f2f2f2;padding:.8mm 0;letter-spacing:-.03em}
+.org .box .b{flex:1;font-size:11pt;padding:1.4mm 2mm;line-height:1.45;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.org .box .b .nm{font-family:var(--gyeon);font-size:12pt}
+.org .box.empty .h{color:transparent}
+
+/* 쪽 번호: 아래 가운데 - 1 - */
+.foot{margin-top:auto;text-align:center;font-family:var(--myeong);font-size:11pt;letter-spacing:0;padding-top:3mm}
+.page>*{flex-shrink:0}
